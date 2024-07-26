@@ -1,0 +1,91 @@
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+    transition: var(--transition);
+    padding: 20px;
+    z-index: 200;
+    flex-direction: column;
+}
+
+.sidebar .sidebar-wrapper{
+    flex: 1;
+    flex-direction: column;
+    background: var(--bg-gradient-1);
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px 10px;
+    overflow: hidden;
+    border-radius: 15px;
+    height: 100%;
+}
+
+.sidebar .sidebar-wrapper .top{
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.sidebar .sidebar-wrapper .logo{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.sidebar .sidebar-wrapper .middle{
+    flex:1;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.sidebar .sidebar-wrapper .middle .tab{
+    justify-content: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 10px;
+    margin: 15px 10px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.sidebar .sidebar-wrapper .middle .tab:hover{
+    color: var(--primary);
+}
+
+.sidebar .sidebar-wrapper .middle .tab.active{
+    color: var(--color-white);
+    background: var(--gradient-1);
+}
+
+.sidebar .sidebar-wrapper .cancel-btn{
+    display: none;
+    position: relative;
+    z-index: 201;
+}
+
+.sidebar-overlay{
+    z-index: 150;
+}
+
+/* Responsive design */
+@media (max-width:900px){
+    .sidebar{
+        width: 100%;
+        max-width: 320px;
+        left: -350px;
+        -webkit-backdrop-filter: blur(100px);
+        backdrop-filter: blur(100px);
+        padding: 0;
+    }
+    .sidebar .sidebar-wrapper{
+        border-radius: 0;
+    }
+    .sidebar .sidebar-wrapper .cancel-btn{
+        display: flex;
+    }
+    .sidebar.show{
+        left: 0;
+    }
+}

@@ -1,0 +1,47 @@
+.navigation-buttons{
+    padding: 30px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    gap: 50px;
+    background: var(--bg-gradient-1);
+    text-align: center;
+    box-shadow: var(--inner-glow);
+}
+
+.navigation-buttons .card{
+    transition: var(--tranition);
+    cursor: pointer;
+}
+
+.navigation-buttons .card:hover{
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+.navigation-buttons .card .icon{
+    width: 6rem;
+    height: 6rem;
+    background: var(--primary);
+    font-size: 3rem;
+    color: var(--color-white);
+    border-radius: 30px;
+}
+
+/* Responsive */
+
+@media (max-width:400px){
+    .navgation-buttons{
+        padding: 30px 20px;
+    }
+    .navigation-buttons .card .icon{
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
+        border-radius: 15px;
+    }
+    .navgation-buttons .card p{
+        font-size: 12px;
+    }
+}
