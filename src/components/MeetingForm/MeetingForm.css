@@ -1,0 +1,69 @@
+.create-meeting-form {
+  background-color: var(--bg-gradient-1);
+  box-shadow: var(--inner-gradient);
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+  padding: 40px 30px;
+  border-radius: 20px;
+}
+
+.create-meeting-form > .top {
+  margin-bottom: 50px;
+}
+
+.create-meeting-form > .top .title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.create-meeting-form .row {
+  justify-content: space-between;
+}
+
+.create-meeting-form label {
+  display: block;
+}
+
+.create-meeting-form .control-container {
+  margin: 10px 0;
+}
+
+.create-meeting-form .control {
+  box-shadow: var(--inner-glow);
+  background: var(--bg-varient);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.create-meeting-form > .bottom{
+    margin-top: 50px;
+}
+
+.react-datepicker,
+.react-datepicker__time{
+    background: var(---bg-gradient-1) !important;
+    color: var(--color-text) !important;
+    border: 0px !important;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+}
+
+.react-datepicker__day.react-datepicker__day--selected,
+.react-datepicker__time-list-item--selected{
+    background: var(--gradient-1) !important;
+    color: var(--color-white) !important;
+}
+
+.react-datepicker__day.react-datepicker__day--disabled{
+    color: var(--color-muted) !important;
+}
+
+.react-datepicker__day{
+    color: var(--color-text) !important;
+}
+
+.react-datepicker__day:hover,
+.react-datepicker__time-list-item:hover{
+    color: #000 !important;
+}

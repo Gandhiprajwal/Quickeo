@@ -1,0 +1,8 @@
+.meetings-list{
+    flex-direction: column;
+    width: 100%;
+}
+
+.meetings-list .main-title{
+    font-size: 1.5rem;
+}

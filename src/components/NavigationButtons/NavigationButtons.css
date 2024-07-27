@@ -8,6 +8,7 @@
     background: var(--bg-gradient-1);
     text-align: center;
     box-shadow: var(--inner-glow);
+    width: 100%;
 }
 
 .navigation-buttons .card{

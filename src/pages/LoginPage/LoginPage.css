@@ -4,7 +4,7 @@
 
 .login-page .login-form{
     background: var(--bg-gradient-1);
-    width: 100%;
+    /* width: 100%; */
     max-width: 700px;
     padding: 30px;
     border-radius: 30px;

@@ -21,7 +21,7 @@ export const Sidebar = ({ show, onClose }) => {
               <div className="flex-center primary">
                 <BiLogoDiscourse />
               </div>
-              <span className="g-text">voom</span>
+              <span className="g-text">Quickeo</span>
             </div>
             <div className="flex-center icon-wrapper cancel-btn" onClick={onClose}>
               <FaTimes />

@@ -1,0 +1,12 @@
+.current-time-card{
+    width: 100%;
+}
+
+.current-time-card .card{
+    background: var(--bg-gradient-1);
+    box-shadow: var(--inner-glow);
+    padding: 30px;
+    border-radius: 30px;
+    margin: 30px 0px;
+}
+

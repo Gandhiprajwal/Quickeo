@@ -1,0 +1,11 @@
+.no-meeting-placeholder {
+  background: var(--bg-gradient-1);
+  padding: 30px;
+  text-align: center;
+  margin: 30px 0;
+  border-radius: 15px;
+}
+
+.no-meeting-placeholder .bnt {
+  margin-top: 40px;
+}

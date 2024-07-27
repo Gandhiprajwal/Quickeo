@@ -1,0 +1,22 @@
+.homepage{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 500px auto;
+    gap: 30px;
+}
+
+.homepage .left{
+    flex-direction: column;
+    width: 100%;
+}
+
+.homepage .right{
+    flex-direction: column;
+    width: 100%;
+}
+
+@media(max-width:1165px){
+    .homepage{
+        grid-template-columns: 100%;
+    }
+}

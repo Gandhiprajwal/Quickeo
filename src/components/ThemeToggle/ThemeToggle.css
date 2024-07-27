@@ -1,0 +1,7 @@
+.theme-toggle.react-toggle--checked .react-toggle-track {
+    background: var(--gradient-1);
+}
+
+.theme-toggle.react-toggle--focus .react-toggle-thumb{
+    box-shadow: 0px 0px 2px 3px var(--primary);
+}

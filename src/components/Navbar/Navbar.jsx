@@ -6,6 +6,7 @@ import { TiThMenu } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LogoutButton from "../LogoutButton/LogoutButton";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const Navbar = ({ onMenuClick }) => {
   const [showProfileBar, setShowProfileBar] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = ({ onMenuClick }) => {
             <div className="flex-center icon-wrapper">
               <LuSearch />
             </div>
-            <input type="text" placeholder="Search for meetings" />
+            <input type="text" placeholder="Search for meetings"/>
           </div>
         </div>
         <div className="column">
@@ -65,6 +66,10 @@ const Navbar = ({ onMenuClick }) => {
             <h4 className="name">{displayName}</h4>
             <p className="muted email">{email}</p>
           </div>
+        </div>
+        <div className="flex-center theme-row">
+          <p className="muted">Dark Theme</p>
+          <ThemeToggle />
         </div>
         <div className="flex-center buttons-wrapper">
           {

@@ -1,0 +1,33 @@
+.meeting-card {
+  background: var(--bg-gradient-1);
+  box-shadow: var(--inner-glow);
+  padding: 30px;
+  border-radius: 30px;
+  margin: 15px 0;
+}
+
+.meeting-card > .top {
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.meeting-card > .top .titile {
+  font-size: 1rem;
+}
+
+.meeting-card > .bottom {
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.meeting-card > .bottom .users-container {
+  justify-content: flex-start;
+}
+
+.meeting-card > .bottom .users-container .profile {
+  border: solid 4px var(--primary);
+}
+
+.meeting-card > .bottom .users-container .profile:not(:first-child){
+    margin-left: -30px;
+}
