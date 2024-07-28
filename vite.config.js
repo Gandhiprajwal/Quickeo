@@ -5,6 +5,11 @@ dotenv.config()
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server:{
+    proxy:{
+      "/api":"http://localhost:9000"
+    }
+  },
   plugins: [react()],
   define:{
     'process.env': process.env

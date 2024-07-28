@@ -86,7 +86,8 @@ const JoinPage = () => {
         sharedLinks: [
           {
             name: "Personal link",
-            url: window.location.origin + "/join/" + param.id,
+            url: window.location.protocol + '//' + 
+             window.location.host + window.location.pathname
           },
         ],
         scenario: {
