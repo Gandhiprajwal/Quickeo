@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voom - Video conferencing app</title>
+    <style type="text/css">
+      html[data-theme="light"] {
+        background: #1f1f1f;
+      }
+      html[data-theme="dark"] {
+        background: #0a0a0a;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-DCywxPWv.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CxZErHV0.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+<script>
+  (function () {
+    const themeStorageKey = "theme";
+    function setThemeOnDocumentHTML(mode) {
+      document.documentElement.setAttribute(
+        "data-theme",
+        mode ? "dark" : "light"
+      );
+    }
+
+    let preferDarkQuery = "(prefers-color-scheme:dark)";
+    let mql = window.matchMedia(preferDarkQuery);
+    let supportsColorSchemeQuery = mql.media === preferDarkQuery;
+    let localStorageTheme = null;
+
+    try {
+      localStorageTheme = localStorage.getItem(themeStorageKey);
+    } catch (err) {
+      // console.error(err)
+    }
+    let localStorageExists = localStorageTheme !== null;
+    if (localStorageExists) {
+      localStorageTheme = JSON.parse(localStorageTheme);
+    }
+    if (localStorageExists) {
+      setThemeOnDocumentHTML(localStorageTheme);
+    } else if (supportsColorSchemeQuery) {
+      setThemeOnDocumentHTML(mql.matches);
+      localStorage.setItem(themeStorageKey, mql.matches);
+    } else {
+      localStorage.setItem(themeStorageKey, false);
+    }
+  })();
+</script>
