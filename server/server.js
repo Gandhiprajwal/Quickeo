@@ -14,6 +14,22 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 9000;
 
+// -----------------------------Deployment----------------------------------
+// Serve static files from the React frontend app
+if (process.env.NODE_ENV === "PRODUCTION") {
+  app.use(express.static(path.join(__dirname, "dist")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "dist", "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.json({
+      message: "Welcome to voom api",
+      status: "sucess",
+    });
+  });
+}
+
 // middleware initialization
 app.use(cors());
 app.use(middleware.decodeToken); // Affect every routes
